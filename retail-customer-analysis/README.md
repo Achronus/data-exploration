@@ -32,7 +32,7 @@ For example, the `StockCode` column should only contain 5-digit numeric codes. Y
 
 This dataset really helped me refine my dataset analysis preparation skils and massively tickled the analyst and engineer inside of me (E.g., putting a system together to simplify data pre-processing on future projects).
 
-You can find the full analysis with my raw thoughts at each step in the [analysis.ipynb](/analysis.ipynb) Jupyter Notebook.
+You can find the full analysis with my raw thoughts at each step in the [analysis.ipynb](https://github.com/Achronus/data-exploration/blob/main/retail-customer-analysis/analysis.ipynb) Jupyter Notebook.
 
 What you'll find in the notebook:
 
@@ -53,7 +53,6 @@ This dataset is very comprehensive and has a lot of flexibility for smaller anal
 
 ## Final Visualisation
 
-![Final Visualisation](/figs/main-barchart.png)
+![Final Visualisation](https://github.com/Achronus/data-exploration/blob/main/retail-customer-analysis/figs/main-barchart.png)
 
 In our final analysis, we have 7 main clusters - the first four relate to our core data and the last 3 outliers.
-
