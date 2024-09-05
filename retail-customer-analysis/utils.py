@@ -6,20 +6,28 @@ from pydantic import BaseModel
 
 
 class CorePlotDetails(BaseModel):
-    column: str
     title: str
     xlabel: str
     ylabel: str
 
 
 class HistogramDetails(CorePlotDetails):
+    column: str
     bins: int
     color: str
     edgecolor: str = "black"
 
 
 class BoxplotDetails(CorePlotDetails):
+    column: str
     color: str
+
+
+class ViolinDetails(CorePlotDetails):
+    x: str
+    y: str
+    palette: dict[int, str] | list[str] | None = None
+    xlabel: str | None = None
 
 
 def get_outliers(
@@ -62,7 +70,7 @@ def plot_histograms(
     details: list[HistogramDetails],
     figsize: tuple[int, int] = (15, 5),
 ) -> None:
-    """Creates a set of histogram plots based on the number of detailed provided and displays them."""
+    """Creates a set of histogram plots based on the number of details provided and displays them."""
     plt.figure(figsize=figsize)
 
     num_plots = len(details)
@@ -88,7 +96,7 @@ def plot_boxes(
     details: list[BoxplotDetails],
     figsize: tuple[int, int] = (15, 5),
 ) -> None:
-    """Creates a set of box plots based on the number of detailed provided and displays them."""
+    """Creates a set of box plots based on the number of details provided and displays them."""
     plt.figure(figsize=figsize)
 
     num_plots = len(details)
@@ -101,6 +109,32 @@ def plot_boxes(
         )
         plt.title(detail.title)
         plt.xlabel(detail.xlabel)
+        plt.ylabel(detail.ylabel)
+
+    plt.tight_layout()
+    plt.show()
+
+
+def plot_violins(
+    df: pd.DataFrame,
+    details: list[ViolinDetails],
+    figsize: tuple[int, int] = (8, 12),
+) -> None:
+    """Creates a set of violin plots based on the number of details provided and displays them."""
+    plt.figure(figsize=figsize)
+
+    num_plots = len(details)
+
+    for i, detail in enumerate(details):
+        plt.subplot(num_plots, 1, i + 1)
+        sns.violinplot(
+            x=df[detail.x],
+            y=df[detail.y],
+            palette=detail.palette,
+            hue=df[detail.x],
+        )
+        sns.violinplot(y=df[detail.y], color="gray", linewidth=1.0)
+        plt.title(detail.title)
         plt.ylabel(detail.ylabel)
 
     plt.tight_layout()
