@@ -39,8 +39,9 @@ What you'll find in the notebook:
 - Initial Exploratory Data Analysis (EDA)
 - Handling of missing values and invalid records
 - Feature Engineering
-- A Visual Exploration of the data using Histograms and Boxplots
+- A visual exploration of the data using Histograms and Boxplots
 - K-Means Clustering
+- Detailed analysis of clusters for core data and outliers
 
 ## Extensions
 
