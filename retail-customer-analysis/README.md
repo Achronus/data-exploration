@@ -50,3 +50,10 @@ This dataset is very comprehensive and has a lot of flexibility for smaller anal
 - DCGS `StockCodes` - which one performed the best
 - Identifying what items are mostly gifted
 - Understanding more about the items that are missing Customer IDs. E.g., are they thefts or stock-write offs?
+
+## Final Visualisation
+
+![Final Visualisation](/figs/main-barchart.png)
+
+In our final analysis, we have 7 main clusters - the first four relate to our core data and the last 3 outliers.
+
