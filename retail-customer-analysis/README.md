@@ -39,6 +39,7 @@ What you'll find in the notebook:
 - Initial Exploratory Data Analysis (EDA)
 - Handling of missing values and invalid records
 - Feature Engineering
+- A Visual Exploration of the data using Histograms and Boxplots
 - K-Means Clustering
 
 ## Extensions
@@ -48,10 +49,3 @@ This dataset is very comprehensive and has a lot of flexibility for smaller anal
 - DCGS `StockCodes` - which one performed the best
 - Identifying what items are mostly gifted
 - Understanding more about the items that are missing Customer IDs. E.g., are they thefts or stock-write offs?
-
-## Summary
-
-Key points to action during data cleaning:
-
-- Remove `A` record invoices
-- Remove `Customer ID` missing values
