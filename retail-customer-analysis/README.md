@@ -55,4 +55,6 @@ This dataset is very comprehensive and has a lot of flexibility for smaller anal
 
 ![Final Visualisation](https://github.com/Achronus/data-exploration/blob/main/retail-customer-analysis/figs/main-barchart.png)
 
-In our final analysis, we have 7 main clusters - the first four relate to our core data and the last 3 outliers.
+In our final analysis, we have 7 main clusters - the first 4 relate to our core data and the last 3 outliers.
+
+We overlay the mean of our features (Monetary Value, Frequency, and Recency) over the bars for comparison. Each cluster is labelled with an advised action based on the analysis discussed in the [analysis.ipynb](https://github.com/Achronus/data-exploration/blob/main/retail-customer-analysis/analysis.ipynb) notebook.
